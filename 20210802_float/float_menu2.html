@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float menu</title>
+    <style>
+ 
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        .clearfix:after{content: "";clear:both;display: block;}
+        /* block 전체에 적용 */
+        a:link,a:visited{text-decoration: none;color: black;}
+        /* 링크 눌렀을 때 색x / 글씨 검정 */
+
+        .menu{text-align: center;line-height: 50px;}
+
+        /* .nav */
+        div.nav{width: 1200px; background-color:orange;
+        margin:0 auto;}
+        /* 메뉴 가운데 정렬 */
+
+        div.nav>ul>li{float: left;width: 200px;}
+        /* float:left 오름차순 / float:right 내림차순 + 박스당 크기 */
+        div.nav>ul>li>a{display:block; text-align: center;line-height: 40px;}
+        /* a 박스 전체 / 글씨 정렬 / 글씨 위아래 길이 */
+        
+        div.nav>ul>li>a:hover{background-color: red; color: white;}
+        /* hover: 눌렀을 때 변경되는 배경 색/글자 색 */
+
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h1>logo</h1>
+
+    </div>
+<!-- div.nav>ul>li*6>a[href="#"]>{menu$} -->
+    <div class="nav">
+        <ul class="clearfix">
+            <!-- class 전체적으로 clearfix 적용시키기 -->
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+            <li><a href="#">menu6</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
