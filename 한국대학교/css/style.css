@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* header */
+header#header{}
+header#header div.topWrap{background-color: #0044AF; width: 100%;}
+header#header div.topWrap div.top{
+    width: 1600px; height: 40px; margin: 0 auto; position: relative;
+}
+
+nav.util{position: absolute;background: #00163B;}
+nav.util ul li:nth-child(1){background-color: #fff;}
+nav.util > ul{position: relative;left: 0;}
+nav.util > ul li{float: left; border-right: 3px solid #0044AF;}
+nav.util > ul li a{
+    display: block; text-align: center;line-height: 40px;
+    height: 40px; font-size: 15px; width: calc(364px / 3);
+    position: relative; color: #6A6A6A; font-weight: bold;
+}
+nav.util > ul > li:nth-child(2) > a{color: white; font-weight: bold;}
+nav.util > ul > li:nth-child(3) > a{color: white; font-weight: bold;}
+
+
+nav.util2{position: absolute;right: 0;}
+nav.util2 > ul li{float: left;height: 40px;}
+nav.util2 > ul li a{
+    display: block; text-align: center; line-height: 40px; 
+    color: white; font-weight:bold; font-size: 12px; padding: 0 20px;
+}
+
+nav.util2 > ul li:nth-child(2) a{font-size: 20px; font-weight: bold;}
+
+div.logWrap{}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprite</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        h1{width: 125px; height: 30px; background-image: url(../images/naver.png); margin: 20px auto;}
+        h1 a{display: block; height: 30px; text-indent: -9999px;}
+
+
+        div.nav{ width: 980px; height: 50px; margin: 0 auto; }
+        div.nav li{
+            height: 50px; background-image: url(../images/top_gnb.png);
+            background-repeat: no-repeat;
+        }
+
+        div.nav a{display: block; height: 50px; text-indent: -9999px;}
+
+        div.nav li:nth-child(1){background-position: 0 0;}
+        div.nav li:nth-child(2){background-position: 0 -50px;}
+        div.nav li:nth-child(3){background-position: 0 -100px;}
+        div.nav li:nth-child(4){background-position: 0 -150px;}
+        div.nav li:nth-child(5){background-position: 0 -200px;}
+        div.nav li:nth-child(6){background-position: 0 -250px;}
+        div.nav li:nth-child(7){background-position: 0 -300px;}
+
+        div.nav li:nth-child(1):hover{background-position: 0 -350px;}
+        div.nav li:nth-child(2):hover{background-position: 0 -400px;}
+        div.nav li:nth-child(3):hover{background-position: 0 -450px;}
+        div.nav li:nth-child(4):hover{background-position: 0 -500px;}
+        div.nav li:nth-child(5):hover{background-position: 0 -550px;}
+        div.nav li:nth-child(6):hover{background-position: 0 -600px;}
+        div.nav li:nth-child(7):hover{background-position: 0 -650px;}
+
+        div.nav li:nth-child(1).active{background-position: 0 -350px;}
+        div.nav li:nth-child(2).active{background-position: 0 -400px;}
+        div.nav li:nth-child(3).active{background-position: 0 -450px;}
+        div.nav li:nth-child(4).active{background-position: 0 -500px;}
+        div.nav li:nth-child(5).active{background-position: 0 -550px;}
+        div.nav li:nth-child(6).active{background-position: 0 -600px;}
+        div.nav li:nth-child(7).active{background-position: 0 -650px;}
+       
+
+    </style>
+    
+</head>
+<body>
+    <h1><a href="2222.html">로고</a></h1>
+    <div class="nav">
+        <ul class="clearfix">
+            <li><a href="2222sub.html">menu</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+        </ul>
+    </div>
+</body>
+</html>
