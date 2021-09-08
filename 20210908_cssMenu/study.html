@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".slider").bxSlider()
+        });
+
+    </script>
+
+    <style>
+        .slider>li>img{width: 100%;}
+        .submenu{display: none;}
+
+        .gnb{width: 1000px; background: skyblue; margin: 0 auto;}
+        .gnb>ul>li{float: left; width: calc(100% / 4);}
+        
+        .gnb>ul>li>a{display: block; line-height: 40px; text-align: center;}
+        .gnb>ul>li:hover{background: lightseagreen;}
+        .gnb>ul>li:hover a{color: white;}
+
+        .gnb>ul>li:hover .submenu{display: block;}
+        .submenu li{text-align: center;display: block;line-height: 30px;font-size: 14px;}
+ 
+    </style>
+</head>
+<body>
+    <nav class="gnb fix">
+        <ul class="clearfix">
+            <li><a href="#">MENU1</a>
+                <ul class="submenu">
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MENU2</a>
+                <ul class="submenu">
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MENU3</a>
+                <ul class="submenu">
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MENU4</a>
+                <ul class="submenu">
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                    <li><a href="#">sub01</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <ul class="slider">
+        <li><img src="../images/pc01.jpg" alt=""></li>
+        <li><img src="../images/pc02.jpg" alt=""></li>
+        <li><img src="../images/pc03.jpg" alt=""></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .submenu{display: none;}
+        .gnb{
+            width: 1000px; margin: 0 auto; _background: pink; 
+            position: absolute; 
+
+
+            /* 가운데정렬 방법 */
+            left: 50%; margin-left: -500px;
+            /* left: 50%; transform: translateX(-50%); 1000에 비율로 가운데로*/
+            /* left: calc(50% - 500px); 가운데 맞춤 */ 
+        }
+
+
+        .gnb .fix{position: fixed;}
+        /* 스크롤 내려도 고정 가능 - 밑에 fix넣어야돼 */
+
+
+        .gnb>ul>li{float: left; width: calc(100% / 4);background: pink;} /*ul 안쪽의 li도 적용되기 때문에 꺽쇠 넣거나 클래스 이름 적용하기.*/
+        .gnb>ul>li>a{display: block; line-height: 40px; text-align: center;}
+        
+        .gnb>ul>li:hover{background: lightseagreen;}
+        .gnb>ul>li:hover a{color: white;}
+
+        /* .gnb>ul>li:nth-child(1) .submenu{display: block;} : 1번만*/
+
+        .gnb>ul>li:hover .submenu{display: block;} /* 특정하나만
+
+        .gnb>ul:hover .submenu{display: block;} /* 전체 다 메뉴보임 */
+
+        .submenu{}
+        .submenu a{
+            display: block; line-height: 30px; text-align: center;
+            font-size: 12px;
+        }
+        .submenu li:hover{background: lightsalmon;}
+
+        .visual{background: skyblue; height: 300px;}
+
+    </style>
+</head>
+<body>
+    <nav class="gnb fix">
+        <ul class="clearfix">
+            <li>
+                <a href="#">MENU1</a>
+                <ul class="submenu">
+                    <li><a href="#">sub01_01</a></li>
+                    <li><a href="#">sub01_02</a></li>
+                    <li><a href="#">sub01_03</a></li>
+                    <li><a href="#">sub01_04</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">MENU2</a>
+                <ul class="submenu">
+                    <li><a href="#">sub02_01</a></li>
+                    <li><a href="#">sub02_02</a></li>
+                    <li><a href="#">sub02_03</a></li>
+                    <li><a href="#">sub02_04</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">MENU3</a>
+                <ul class="submenu">
+                    <li><a href="#">sub03_01</a></li>
+                    <li><a href="#">sub03_02</a></li>
+                    <li><a href="#">sub03_03</a></li>
+                    <li><a href="#">sub03_04</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">MENU4</a>
+                <ul class="submenu">
+                    <li><a href="#">sub04_01</a></li>
+                    <li><a href="#">sub04_02</a></li>
+                    <li><a href="#">sub04_03</a></li>
+                    <li><a href="#">sub04_04</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="visual"></div>
+</body>
+</html>

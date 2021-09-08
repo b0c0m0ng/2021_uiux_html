@@ -2,9 +2,7 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 li{list-style: none;}
 a:link, a:visited{text-decoration: none; color: black;}
-<<<<<<< HEAD
 .clearfix:after{content:""; clear: both; display: block;}
 img{display: block;}
-=======
-.clearfix:after{content:""; clear: both; display: block;}
->>>>>>> 223b3a53a7040af32add6bbe4a4968c44a86a64f
+
+
