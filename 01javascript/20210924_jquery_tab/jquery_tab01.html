@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .tab li{float: left;padding: 10px 20px;}
+        .tab li.on{background: skyblue;}
+        .con div{display: none;}
+        .con div:first-child{display: block;}
+    </style>
+
+</head>
+<body>
+    <ul class="tab clearfix">
+        <li class="on">menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+    <div class="con">
+        <div>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, error facilis? Quis quidem quos ipsam cum, asperiores, explicabo ab accusantium quibusdam repellendus, necessitatibus dolore. In eaque aspernatur corrupti aut id?</div>
+        <div>2 Odio voluptatum perferendis laborum possimus fuga rerum consequuntur deleniti unde tempora veritatis repellat, impedit velit vel accusantium. Temporibus, fugiat aliquid suscipit obcaecati vel dolore deserunt exercitationem praesentium repellendus. Aut, laboriosam!</div>
+        <div>3 Optio ea quod reprehenderit assumenda enim laudantium atque sunt? Magnam provident vel, modi quia minima dignissimos expedita nulla tempora, ab autem facere alias dolorem et excepturi accusamus placeat obcaecati soluta!</div>
+        <div>4 Optio earum nulla sunt deserunt ea, nemo eaque ex commodi officia voluptas unde eum, praesentium blanditiis placeat numquam aliquam consectetur ipsum, itaque laboriosam vero quo assumenda? Iste aliquam quibusdam possimus!</div>
+    </div>
+
+
+
+    <script>
+// 1번
+        // $("ul>li").eq(0).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(0).addClass("on");
+        // });
+        // $("ul>li").eq(1).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(1).addClass("on");
+        // });
+        // $("ul>li").eq(2).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(2).addClass("on");
+        // });
+        // $("ul>li").eq(3).click(function(){
+        //     $("ul>li").removeClass();
+        //     $("ul>li").eq(3).addClass("on");
+        // });
+
+
+
+
+
+// 2번
+        // for (let i=0;i<$("ul>li").length;i++){
+        //     $("ul>li").eq(i).click(function(){
+        //         $("ul>li").removeClass();
+        //         $("ul>li").eq(i).addClass("on");
+        //     })
+        // }
+
+
+
+
+
+// 3번
+        $("ul>li").click(function(){
+
+            let num = $(this).index();
+
+            console.log($(this).index());
+            $("ul>li").removeClass();
+            $(this).addClass("on");
+
+            $(".con>div").hide();
+            // $(".con>div").eq(num).show();
+            $(".con>div").eq(num).fadeIn(); //에니메이션 효과
+        })
+
+
+    </script>
+</body>
+</html>

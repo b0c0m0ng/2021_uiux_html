@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //$("p").hide()
+            // $("p").eq(0).hide();
+            $("p").eq(0).css("background-color","#ff0"); //set
+            let pBg = $("p").eq(0).css("background-color") //get
+            console.log(pBg);
+            console.log($("p").length);
+
+            $(".btn").on("click",function(){
+                $("p")
+                .eq(1)
+                .css({
+                    "background":"skyblue",
+                    "border":"1px solid #000",
+                    "position":"relative",
+                    "left":"100px"
+                })
+            });
+
+            $(".btn1").click(function(){
+                $("p").eq(1).css({
+                    "background":"white",
+                    "border":"initial",
+                    "position":"initial",
+                });
+                //$("p").eq(1).attr("style","")
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <button class="btn">변경</button>
+    <button class="btn1">원래대로</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, saepe quasi sed quidem mollitia numquam doloribus. 
+        Accusamus iste in adipisci odit cum sapiente minima perspiciatis pariatur? Cumque dolore quasi cupiditate?</p>
+    <p>Id officia dignissimos natus velit ipsam pariatur adipisci quam fuga, amet aliquid minus. 
+        Placeat, tempore perferendis omnis officia harum et id non doloremque unde quas vero deserunt ad. Odit, atque.</p>
+    <p>Ut iusto placeat a vel, adipisci facilis illum veniam architecto enim quis. 
+        Perferendis aspernatur asperiores dicta quod suscipit, ut, unde porro repellat, quam cumque quibusdam maiores dolores velit. Sunt, dignissimos.</p>
+    <p>Repellendus saepe perferendis aspernatur, in facilis dolorum, quas error distinctio iusto delectus, harum sint. 
+        Iusto ea voluptatibus odit asperiores placeat. Aperiam sapiente quas eaque reprehenderit quia quae voluptate itaque ducimus?</p>
+        <script>
+
+            // for(let i=0;i<4;i++){
+            // document.getElementsByTagName("p")[i].style.display = "none";
+            // }
+        </script>
+</body>
+</html>
