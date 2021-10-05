@@ -27,11 +27,62 @@
             width: calc( 760px * 3 ); 
             position: relative; 
             left: calc( -760px * 0 );
+            transition: 0.3s; /* 에니메이션 효과 */
         }
         #thumbnail div.container li{float: left; width: 120px; margin-left: 8px; _padding-top: 10px;}
         
         .ml0{margin-left: 0 !important;}
     </style>
+
+
+
+    <script>
+        $(document).ready(function(){
+            $("#thumbnail li").click(function(){
+                let num = $(this).index();
+                
+                //$("#image>p").hide();
+                $("#image>p").hide().eq(num).show()
+            });
+            
+
+
+            let current = 0;
+            $(".right").click(function(){
+                current++; //current = current + 1
+
+                if(current == 3){current = 2;}
+                
+                imgMove();
+
+                console.log(current);
+            });
+
+            $(".left").click(function(){
+                current--; //current = current - 1
+
+                if(current < 0){current = 0;}
+
+                imgMove();
+
+                console.log(current);
+            });
+
+
+            
+            function imgMove(){
+                // $(".container>ul").css("left",`-760*${current}px`)
+
+                // $(".container>ul").css("left",-760*current)                                           /* 트렌지션으로 에니메이션 효과 적용 시켜야 함 */
+
+                // $(".container>ul").stop().animate({left:-760*current},1000,"linear")                  /* 에니메이션 효과랑 같음, animate는 항상 stop같이 작성. */ 
+                $(".container>ul").stop().animate({left:-760*current},500,"linear")
+            };
+        });
+    </script>
+
+
+
 </head>
 <body>
     <div id="gallery">   <!-- width 824px -->
@@ -84,7 +135,7 @@
                     <li><img src="images/thumb17.jpg" alt="thumb17">17</li>
                 </ul>
             </div>
-            <div class="left"><img src="images/btn_right.gif" alt=""></div>
+            <div class="right"><img src="images/btn_right.gif" alt=""></div>
         </div>
     </div>
 </body>
