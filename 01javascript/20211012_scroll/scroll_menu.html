@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll menu</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+    <style>
+        .menu{background: lightyellow;}
+        .menu.fixed{position: fixed; background: lightgray; width: 100%;}
+        .menu.fixed a{line-height: 40px;}
+        .menu ul{width: 1000px; margin: 0 auto;}
+        .menu li{float: left; width: 20%;}
+        .menu li a{display: block; text-align: center; line-height: 60px; transition: 0.3s;}
+
+        .content{height: 3000px;}
+    </style>
+    <script>
+        // $(document).ready(function(){});
+            $(function(){
+                $(document).mousewheel(function(event,delta){
+
+                    console.log(delta)
+
+                    $(window).scroll(function(){
+                        let scrollY = $(window).scrollTop();
+                        if(scrollY > 200){
+                            // $(".menu").addClass("fixed")
+
+                            //if(delta > 0) // 스크롤 위로 올렸을때
+                            if(delta > 0){
+                                $(".menu").addClass("fixed") // 스크롤 올릴때는 나타남
+                            }else{
+                                $(".menu").removeClass("fixed") // 스크롤 내릴때는 사라짐
+                            }
+
+                        }else{
+                            $(".menu").removeClass("fixed")
+                        }
+                    })
+
+
+
+
+                });
+
+               
+
+
+            });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="menu">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam culpa eius et ipsa nam debitis tenetur nesciunt assumenda est commodi. Esse cupiditate minima error, minus id illo praesentium obcaecati quo quam. Dolores aperiam temporibus facere quos, accusamus repellat delectus quas obcaecati ad laborum consectetur amet aliquam rerum nihil quia, eos laboriosam velit autem deleniti quae exercitationem officiis dolorum consequatur? Neque possimus consequuntur quaerat natus omnis eius ad laborum eligendi id tempora non animi culpa assumenda, quidem distinctio maiores ab, explicabo error aliquid odit, ratione porro quo. Id possimus veniam consequuntur. Nam earum est tempore nostrum doloremque suscipit enim mollitia maiores.
+        </div>
+    </div>
+</body>
+</html>
